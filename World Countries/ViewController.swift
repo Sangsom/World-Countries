@@ -39,5 +39,14 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "CountryDetailSegue", sender: self)
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CountryDetailSegue" {
+            let vc = segue.destination as! CountryDetailsViewController
+            let index = tableView.indexPathForSelectedRow?.row
+            let country = countries[index!]
+            vc.name = country.name
+        }
+    }
 }
 
