@@ -45,7 +45,13 @@ class ViewController: UITableViewController {
             let vc = segue.destination as! CountryDetailsViewController
             let index = tableView.indexPathForSelectedRow?.row
             let country = countries[index!]
+
             vc.name = country.name
+            vc.capital = country.capital
+            vc.region = country.region
+            vc.subRegion = country.subregion
+            vc.alphaCode = country.alpha2Code
+            vc.population = country.population
         }
     }
 }

@@ -58,13 +58,62 @@
                     <view key="view" contentMode="scaleToFill" id="RgY-5g-RH3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PME-Cw-Tj0">
+                                <rect key="frame" x="8" y="367" width="398" height="162.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ild-ay-qdq">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rq0-4P-jHm">
+                                        <rect key="frame" x="0.0" y="35.5" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeO-HH-CVd">
+                                        <rect key="frame" x="0.0" y="71" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdL-Ds-jhK">
+                                        <rect key="frame" x="0.0" y="106.5" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sl-C2-PN1">
+                                        <rect key="frame" x="0.0" y="142" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PME-Cw-Tj0" firstAttribute="centerY" secondItem="RgY-5g-RH3" secondAttribute="centerY" id="445-lv-Fl8"/>
+                            <constraint firstItem="q8E-DA-IH9" firstAttribute="trailing" secondItem="PME-Cw-Tj0" secondAttribute="trailing" constant="8" id="JBB-bE-M9P"/>
+                            <constraint firstItem="PME-Cw-Tj0" firstAttribute="leading" secondItem="q8E-DA-IH9" secondAttribute="leading" constant="8" id="ndy-Yx-gEh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="q8E-DA-IH9"/>
                     </view>
+                    <connections>
+                        <outlet property="alphaCodeLabel" destination="RdL-Ds-jhK" id="qQ9-AJ-L7K"/>
+                        <outlet property="capitalLabel" destination="ild-ay-qdq" id="Nw4-dx-dwG"/>
+                        <outlet property="populationLabel" destination="0Sl-C2-PN1" id="ZSG-m9-g1a"/>
+                        <outlet property="regionLabel" destination="Rq0-4P-jHm" id="c62-6c-K5C"/>
+                        <outlet property="subRegionLabel" destination="EeO-HH-CVd" id="12P-Pe-rxm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tjT-tS-Sat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1797" y="110"/>
+            <point key="canvasLocation" x="1795.6521739130437" y="109.82142857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="25F-cv-PnN">
