@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct Country {
+struct Country: Codable {
     var name: String
     var capital: String
     var flag: URL
+}
+
+struct Countries: Codable {
+    var countries: [Country]
 }
