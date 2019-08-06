@@ -10,20 +10,31 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-    var countries: [Country]!
+    var countries: [Country] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
 
         CountriesController.shared.fetchAllCountries { (countriesData) in
             if let countriesData = countriesData {
                 DispatchQueue.main.async {
                     self.countries = countriesData
                     print(countriesData)
+                    self.tableView.reloadData()
                 }
             }
         }
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return countries.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CountryIdentifier", for: indexPath)
+        let country = countries[indexPath.row]
+        cell.textLabel?.text = country.name
+        return cell
     }
 }
 
