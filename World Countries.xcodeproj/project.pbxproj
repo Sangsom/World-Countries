@@ -14,6 +14,7 @@
 		1B3DA7D622F9928300D0CE79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B3DA7D422F9928300D0CE79 /* LaunchScreen.storyboard */; };
 		1B3DA7DE22F99A0900D0CE79 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3DA7DD22F99A0900D0CE79 /* Country.swift */; };
 		1B3DA7E022F99A9600D0CE79 /* CountriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3DA7DF22F99A9600D0CE79 /* CountriesController.swift */; };
+		1B3DA7E422F9B0FC00D0CE79 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3DA7E322F9B0FC00D0CE79 /* CountryDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1B3DA7D722F9928300D0CE79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B3DA7DD22F99A0900D0CE79 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		1B3DA7DF22F99A9600D0CE79 /* CountriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesController.swift; sourceTree = "<group>"; };
+		1B3DA7E322F9B0FC00D0CE79 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1B3DA7DF22F99A9600D0CE79 /* CountriesController.swift */,
 				1B3DA7DD22F99A0900D0CE79 /* Country.swift */,
 				1B3DA7CF22F9928200D0CE79 /* Main.storyboard */,
+				1B3DA7E322F9B0FC00D0CE79 /* CountryDetailsViewController.swift */,
 				1B3DA7D222F9928300D0CE79 /* Assets.xcassets */,
 				1B3DA7D422F9928300D0CE79 /* LaunchScreen.storyboard */,
 				1B3DA7D722F9928300D0CE79 /* Info.plist */,
@@ -143,6 +146,7 @@
 			files = (
 				1B3DA7E022F99A9600D0CE79 /* CountriesController.swift in Sources */,
 				1B3DA7CE22F9928200D0CE79 /* ViewController.swift in Sources */,
+				1B3DA7E422F9B0FC00D0CE79 /* CountryDetailsViewController.swift in Sources */,
 				1B3DA7DE22F99A0900D0CE79 /* Country.swift in Sources */,
 				1B3DA7CC22F9928200D0CE79 /* AppDelegate.swift in Sources */,
 			);

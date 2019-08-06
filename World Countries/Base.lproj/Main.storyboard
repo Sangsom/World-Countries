@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,10 +43,28 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="gIz-KA-0X3"/>
+                    <connections>
+                        <segue destination="JPk-zN-Xqd" kind="show" id="tsv-cZ-aad"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfF-N9-L9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="978.26086956521749" y="110.49107142857143"/>
+        </scene>
+        <!--Country Details View Controller-->
+        <scene sceneID="Pp8-Xj-di3">
+            <objects>
+                <viewController id="JPk-zN-Xqd" customClass="CountryDetailsViewController" customModule="World_Countries" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RgY-5g-RH3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="q8E-DA-IH9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tjT-tS-Sat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797" y="110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="25F-cv-PnN">
