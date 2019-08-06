@@ -19,7 +19,6 @@ class ViewController: UITableViewController {
             if let countriesData = countriesData {
                 DispatchQueue.main.async {
                     self.countries = countriesData
-                    print(countriesData)
                     self.tableView.reloadData()
                 }
             }
