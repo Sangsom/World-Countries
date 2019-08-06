@@ -28,6 +28,7 @@
 		1B3DA7DD22F99A0900D0CE79 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		1B3DA7DF22F99A9600D0CE79 /* CountriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesController.swift; sourceTree = "<group>"; };
 		1B3DA7E322F9B0FC00D0CE79 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
+		1B3DA7E522F9B88A00D0CE79 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 		1B3DA7BF22F9928200D0CE79 = {
 			isa = PBXGroup;
 			children = (
+				1B3DA7E522F9B88A00D0CE79 /* README.md */,
 				1B3DA7CA22F9928200D0CE79 /* World Countries */,
 				1B3DA7C922F9928200D0CE79 /* Products */,
 			);
