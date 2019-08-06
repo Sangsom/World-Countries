@@ -35,5 +35,9 @@ class ViewController: UITableViewController {
         cell.textLabel?.text = country.name
         return cell
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "CountryDetailSegue", sender: self)
+    }
 }
 

@@ -44,7 +44,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="gIz-KA-0X3"/>
                     <connections>
-                        <segue destination="JPk-zN-Xqd" kind="show" id="tsv-cZ-aad"/>
+                        <segue destination="JPk-zN-Xqd" kind="show" identifier="CountryDetailSegue" id="tsv-cZ-aad"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfF-N9-L9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
