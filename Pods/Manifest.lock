@@ -1,22 +1,16 @@
 PODS:
-  - CocoaLumberjack (3.5.2):
-    - CocoaLumberjack/Core (= 3.5.2)
-  - CocoaLumberjack/Core (3.5.2)
-  - SVGKit (2.1.0):
-    - CocoaLumberjack (~> 3.0)
+  - SwiftSVG (2.3.0)
 
 DEPENDENCIES:
-  - SVGKit
+  - SwiftSVG
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - CocoaLumberjack
-    - SVGKit
+    - SwiftSVG
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
-  SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
+  SwiftSVG: a864db6198fbddfd377f8169849580df18512e67
 
-PODFILE CHECKSUM: 41461210d58a19302ed89bb8c8e674f020d036d7
+PODFILE CHECKSUM: 6545d9373275a244495c92da8d787f30cc65c800
 
 COCOAPODS: 1.6.1

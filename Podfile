@@ -6,5 +6,5 @@ target 'World Countries' do
   use_frameworks!
 
   # Pods for World Countries
-  pod 'SVGKit'
+  pod 'SwiftSVG'
 end
