@@ -11,6 +11,7 @@ import UIKit
 class CountryDetailsViewController: UIViewController {
 
     // MARK: Outlets
+    @IBOutlet var flagImageView: UIImageView!
     @IBOutlet var capitalLabel: UILabel!
     @IBOutlet var regionLabel: UILabel!
     @IBOutlet var subRegionLabel: UILabel!

@@ -60,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PME-Cw-Tj0">
-                                <rect key="frame" x="8" y="367" width="398" height="162.5"/>
+                                <rect key="frame" x="8" y="344.5" width="398" height="162.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ild-ay-qdq">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
@@ -94,11 +94,20 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yEd-Fx-Pk1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="248.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yEd-Fx-Pk1" secondAttribute="height" multiplier="5:3" id="534-4F-0ka"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PME-Cw-Tj0" firstAttribute="centerY" secondItem="RgY-5g-RH3" secondAttribute="centerY" id="445-lv-Fl8"/>
+                            <constraint firstItem="yEd-Fx-Pk1" firstAttribute="top" secondItem="q8E-DA-IH9" secondAttribute="top" id="3oy-GG-zej"/>
                             <constraint firstItem="q8E-DA-IH9" firstAttribute="trailing" secondItem="PME-Cw-Tj0" secondAttribute="trailing" constant="8" id="JBB-bE-M9P"/>
+                            <constraint firstItem="yEd-Fx-Pk1" firstAttribute="leading" secondItem="q8E-DA-IH9" secondAttribute="leading" id="KNe-SK-bbN"/>
+                            <constraint firstItem="q8E-DA-IH9" firstAttribute="trailing" secondItem="yEd-Fx-Pk1" secondAttribute="trailing" id="Myh-ri-I6C"/>
+                            <constraint firstItem="PME-Cw-Tj0" firstAttribute="top" secondItem="yEd-Fx-Pk1" secondAttribute="bottom" constant="8" id="dEM-d3-tBt"/>
                             <constraint firstItem="PME-Cw-Tj0" firstAttribute="leading" secondItem="q8E-DA-IH9" secondAttribute="leading" constant="8" id="ndy-Yx-gEh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q8E-DA-IH9"/>
@@ -106,6 +115,7 @@
                     <connections>
                         <outlet property="alphaCodeLabel" destination="RdL-Ds-jhK" id="qQ9-AJ-L7K"/>
                         <outlet property="capitalLabel" destination="ild-ay-qdq" id="Nw4-dx-dwG"/>
+                        <outlet property="flagImageView" destination="yEd-Fx-Pk1" id="QoK-wv-MG5"/>
                         <outlet property="populationLabel" destination="0Sl-C2-PN1" id="ZSG-m9-g1a"/>
                         <outlet property="regionLabel" destination="Rq0-4P-jHm" id="c62-6c-K5C"/>
                         <outlet property="subRegionLabel" destination="EeO-HH-CVd" id="12P-Pe-rxm"/>
