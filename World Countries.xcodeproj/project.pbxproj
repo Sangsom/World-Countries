@@ -15,7 +15,6 @@
 		1B3DA7DE22F99A0900D0CE79 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3DA7DD22F99A0900D0CE79 /* Country.swift */; };
 		1B3DA7E022F99A9600D0CE79 /* CountriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3DA7DF22F99A9600D0CE79 /* CountriesController.swift */; };
 		1B3DA7E422F9B0FC00D0CE79 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3DA7E322F9B0FC00D0CE79 /* CountryDetailsViewController.swift */; };
-		1B3DA7E722FAD2C700D0CE79 /* Helpers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3DA7E622FAD2C700D0CE79 /* Helpers+Extensions.swift */; };
 		65EBD91E1480745705E36C95 /* Pods_World_Countries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3812C9DF5D7615FE7A2C290 /* Pods_World_Countries.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +30,6 @@
 		1B3DA7DF22F99A9600D0CE79 /* CountriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesController.swift; sourceTree = "<group>"; };
 		1B3DA7E322F9B0FC00D0CE79 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 		1B3DA7E522F9B88A00D0CE79 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		1B3DA7E622FAD2C700D0CE79 /* Helpers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helpers+Extensions.swift"; sourceTree = "<group>"; };
 		8344575945C4B14FADF7ACA0 /* Pods-World Countries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World Countries.release.xcconfig"; path = "Target Support Files/Pods-World Countries/Pods-World Countries.release.xcconfig"; sourceTree = "<group>"; };
 		94DB330B81BF7D62A567C703 /* Pods-World Countries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World Countries.debug.xcconfig"; path = "Target Support Files/Pods-World Countries/Pods-World Countries.debug.xcconfig"; sourceTree = "<group>"; };
 		C3812C9DF5D7615FE7A2C290 /* Pods_World_Countries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_World_Countries.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +83,6 @@
 				1B3DA7DD22F99A0900D0CE79 /* Country.swift */,
 				1B3DA7CF22F9928200D0CE79 /* Main.storyboard */,
 				1B3DA7E322F9B0FC00D0CE79 /* CountryDetailsViewController.swift */,
-				1B3DA7E622FAD2C700D0CE79 /* Helpers+Extensions.swift */,
 				1B3DA7D222F9928300D0CE79 /* Assets.xcassets */,
 				1B3DA7D422F9928300D0CE79 /* LaunchScreen.storyboard */,
 				1B3DA7D722F9928300D0CE79 /* Info.plist */,
@@ -99,7 +96,6 @@
 				94DB330B81BF7D62A567C703 /* Pods-World Countries.debug.xcconfig */,
 				8344575945C4B14FADF7ACA0 /* Pods-World Countries.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -203,13 +199,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-World Countries/Pods-World Countries-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftSVG/SwiftSVG.framework",
+				"${BUILT_PRODUCTS_DIR}/Macaw/Macaw.framework",
+				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSVG.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Macaw.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -228,7 +226,6 @@
 				1B3DA7E422F9B0FC00D0CE79 /* CountryDetailsViewController.swift in Sources */,
 				1B3DA7DE22F99A0900D0CE79 /* Country.swift in Sources */,
 				1B3DA7CC22F9928200D0CE79 /* AppDelegate.swift in Sources */,
-				1B3DA7E722FAD2C700D0CE79 /* Helpers+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

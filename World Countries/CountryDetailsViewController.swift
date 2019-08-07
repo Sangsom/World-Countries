@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Macaw
 
 class CountryDetailsViewController: UIViewController {
 
@@ -17,7 +18,8 @@ class CountryDetailsViewController: UIViewController {
     @IBOutlet var subRegionLabel: UILabel!
     @IBOutlet var alphaCodeLabel: UILabel!
     @IBOutlet var populationLabel: UILabel!
-
+    @IBOutlet var svgView: SVGView!
+    
     // MARK: Variables
     var name: String!
     var capital: String!
@@ -30,7 +32,7 @@ class CountryDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        updateUI()
+        loadFlag()
     }
 
     // MARK: Helper methods
@@ -43,6 +45,13 @@ class CountryDetailsViewController: UIViewController {
         subRegionLabel.text = "Sub Region: \(subRegion.description)"
         alphaCodeLabel.text = "Code: \(alphaCode.description)"
         populationLabel.text = "Population: \(population.description)"
-        flagImageView.setImageFromURL(flagURL)
+    }
+
+    func loadFlag() {
+        let text = try! String(contentsOf: flagURL, encoding: String.Encoding.utf8)
+        let node = try! SVGParser.parse(text: text)
+        let flagView = MacawView(node: node, frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width, height: 200))
+        flagView.contentMode = .scaleAspectFit
+        self.view.addSubview(flagView)
     }
 }

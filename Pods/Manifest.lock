@@ -1,16 +1,20 @@
 PODS:
-  - SwiftSVG (2.3.0)
+  - Macaw (0.9.5):
+    - SWXMLHash
+  - SWXMLHash (4.9.0)
 
 DEPENDENCIES:
-  - SwiftSVG
+  - Macaw
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - SwiftSVG
+    - Macaw
+    - SWXMLHash
 
 SPEC CHECKSUMS:
-  SwiftSVG: a864db6198fbddfd377f8169849580df18512e67
+  Macaw: 10bf9e327cb75f24e3225d5229a80ed544df85f0
+  SWXMLHash: 87b0006848a548b7f9485b40bc71721b3ae39add
 
-PODFILE CHECKSUM: 6545d9373275a244495c92da8d787f30cc65c800
+PODFILE CHECKSUM: 77c0e561f93eed2e42416199e6e4af1a687db812
 
 COCOAPODS: 1.6.1
