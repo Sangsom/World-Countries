@@ -12,14 +12,12 @@ import Macaw
 class CountryDetailsViewController: UIViewController {
 
     // MARK: Outlets
-    @IBOutlet var flagImageView: UIImageView!
     @IBOutlet var capitalLabel: UILabel!
     @IBOutlet var regionLabel: UILabel!
     @IBOutlet var subRegionLabel: UILabel!
     @IBOutlet var alphaCodeLabel: UILabel!
     @IBOutlet var populationLabel: UILabel!
-    @IBOutlet var svgView: SVGView!
-    
+
     // MARK: Variables
     var name: String!
     var capital: String!
