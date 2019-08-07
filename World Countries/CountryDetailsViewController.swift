@@ -25,6 +25,7 @@ class CountryDetailsViewController: UIViewController {
     var subRegion: String!
     var alphaCode: String!
     var population: Int!
+    var flagURL: URL!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,5 +43,6 @@ class CountryDetailsViewController: UIViewController {
         subRegionLabel.text = "Sub Region: \(subRegion.description)"
         alphaCodeLabel.text = "Code: \(alphaCode.description)"
         populationLabel.text = "Population: \(population.description)"
+        flagImageView.setImageFromURL(flagURL)
     }
 }

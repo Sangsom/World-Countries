@@ -52,6 +52,7 @@ class ViewController: UITableViewController {
             vc.subRegion = country.subregion
             vc.alphaCode = country.alpha2Code
             vc.population = country.population
+            vc.flagURL = country.flag
         }
     }
 }
