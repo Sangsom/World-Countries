@@ -15,6 +15,8 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "World Countries"
+
         CountriesController.shared.fetchAllCountries { (countriesData) in
             if let countriesData = countriesData {
                 DispatchQueue.main.async {
