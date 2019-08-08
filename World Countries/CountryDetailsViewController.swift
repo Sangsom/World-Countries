@@ -44,11 +44,15 @@ class CountryDetailsViewController: UIViewController {
         loadFlag()
         title = name
 
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        let formattedPopulation = formatter.string(from: NSNumber(value: population))!
+
         capitalLabel.text = "Capital: \(capital.description)"
         regionLabel.text = "Region: \(region.description)"
         subRegionLabel.text = "Sub Region: \(subRegion.description)"
         alphaCodeLabel.text = "Code: \(alphaCode.description)"
-        populationLabel.text = "Population: \(population.description)"
+        populationLabel.text = "Population: \(formattedPopulation.description)"
     }
 
     func loadFlag() {
