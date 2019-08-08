@@ -29,7 +29,7 @@ class CountryDetailsViewController: UIViewController {
     var flagView: MacawView!
 
     override func viewDidLayoutSubviews() {
-        flagView.frame.origin = CGPoint(x: 0, y: self.view.safeAreaInsets.top + 10)
+        flagView.frame.origin = CGPoint(x: 0, y: self.view.safeAreaInsets.top)
     }
 
     override func viewDidLoad() {
