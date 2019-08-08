@@ -7,7 +7,20 @@
 //
 
 import UIKit
+import MapKit
 import Macaw
+
+class Capital: NSObject, MKAnnotation {
+    var title: String?
+    var coordinate: CLLocationCoordinate2D
+    var info : String
+
+    init(title: String, coordinate: CLLocationCoordinate2D, info: String) {
+        self.title = title
+        self.coordinate = coordinate
+        self.info = info
+    }
+}
 
 class CountryDetailsViewController: UIViewController {
 
@@ -17,6 +30,7 @@ class CountryDetailsViewController: UIViewController {
     @IBOutlet var subRegionLabel: UILabel!
     @IBOutlet var alphaCodeLabel: UILabel!
     @IBOutlet var populationLabel: UILabel!
+    @IBOutlet var mapView: MKMapView!
     
     // MARK: Variables
     var name: String!
@@ -42,6 +56,7 @@ class CountryDetailsViewController: UIViewController {
 
     func updateUI() {
         loadFlag()
+        loadMap()
         title = name
 
         let formatter = NumberFormatter()
@@ -68,5 +83,12 @@ class CountryDetailsViewController: UIViewController {
                 height: UIScreen.main.bounds.width / 2.0))
         flagView.contentMode = .scaleAspectFill
         self.view.addSubview(flagView)
+    }
+
+    func loadMap() {
+        let london = Capital(title: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), info: "Home to the 2012 Summer Olympics.")
+
+        mapView.addAnnotation(london)
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), animated: true)
     }
 }

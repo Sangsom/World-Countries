@@ -159,11 +159,21 @@
                                     <constraint firstItem="iWA-Cm-Aa7" firstAttribute="width" secondItem="AqK-Lk-9TD" secondAttribute="width" id="y3I-V5-qLY"/>
                                 </constraints>
                             </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2oA-AO-WMJ">
+                                <rect key="frame" x="0.0" y="561" width="414" height="301"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JPk-zN-Xqd" id="8oG-Qc-a6h"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PME-Cw-Tj0" firstAttribute="centerY" secondItem="RgY-5g-RH3" secondAttribute="centerY" constant="-50" id="3YV-dV-OKD"/>
                             <constraint firstItem="q8E-DA-IH9" firstAttribute="trailing" secondItem="PME-Cw-Tj0" secondAttribute="trailing" constant="8" id="JBB-bE-M9P"/>
+                            <constraint firstItem="q8E-DA-IH9" firstAttribute="trailing" secondItem="2oA-AO-WMJ" secondAttribute="trailing" id="WXd-Hd-8hB"/>
+                            <constraint firstItem="2oA-AO-WMJ" firstAttribute="top" secondItem="PME-Cw-Tj0" secondAttribute="bottom" constant="8" id="Zhe-7o-QWF"/>
+                            <constraint firstItem="2oA-AO-WMJ" firstAttribute="leading" secondItem="q8E-DA-IH9" secondAttribute="leading" id="aPj-lU-IaQ"/>
+                            <constraint firstItem="q8E-DA-IH9" firstAttribute="bottom" secondItem="2oA-AO-WMJ" secondAttribute="bottom" id="emH-qB-RRY"/>
                             <constraint firstItem="PME-Cw-Tj0" firstAttribute="leading" secondItem="q8E-DA-IH9" secondAttribute="leading" constant="8" id="ndy-Yx-gEh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q8E-DA-IH9"/>
@@ -171,6 +181,7 @@
                     <connections>
                         <outlet property="alphaCodeLabel" destination="RdL-Ds-jhK" id="qQ9-AJ-L7K"/>
                         <outlet property="capitalLabel" destination="ild-ay-qdq" id="Nw4-dx-dwG"/>
+                        <outlet property="mapView" destination="2oA-AO-WMJ" id="3Ys-mj-lOb"/>
                         <outlet property="populationLabel" destination="0Sl-C2-PN1" id="ZSG-m9-g1a"/>
                         <outlet property="regionLabel" destination="Rq0-4P-jHm" id="c62-6c-K5C"/>
                         <outlet property="subRegionLabel" destination="EeO-HH-CVd" id="12P-Pe-rxm"/>
