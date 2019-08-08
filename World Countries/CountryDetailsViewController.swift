@@ -29,19 +29,19 @@ class CountryDetailsViewController: UIViewController {
     var flagView: MacawView!
 
     override func viewDidLayoutSubviews() {
-        flagView.frame.origin = CGPoint(x: 0, y: self.view.safeAreaInsets.top)
+        flagView.frame.origin = CGPoint(x: 0, y: self.view.safeAreaInsets.top + 10)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = name
-        loadFlag()
+        updateUI()
     }
 
     // MARK: Helper methods
 
     func updateUI() {
+        loadFlag()
         title = name
 
         capitalLabel.text = "Capital: \(capital.description)"
