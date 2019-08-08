@@ -17,11 +17,12 @@ class CountriesController {
         let allCountriesURL = baseURL.appendingPathComponent("all")
         let task = URLSession.shared.dataTask(with: allCountriesURL) { (data, response, error) in
             let jsonDecode = JSONDecoder()
-
+            
             if let data = data,
                 let countryData = try? jsonDecode.decode([Country].self, from: data) {
                     completion(countryData)
             } else {
+                print("Failed to decode", error.debugDescription)
                 completion(nil)
             }
         }
