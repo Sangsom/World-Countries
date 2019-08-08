@@ -16,4 +16,5 @@ struct Country: Codable {
     var subregion: String
     var population: Int
     var flag: URL
+    var latlng: [Double]
 }

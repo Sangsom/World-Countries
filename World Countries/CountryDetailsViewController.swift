@@ -13,12 +13,10 @@ import Macaw
 class Capital: NSObject, MKAnnotation {
     var title: String?
     var coordinate: CLLocationCoordinate2D
-    var info : String
 
-    init(title: String, coordinate: CLLocationCoordinate2D, info: String) {
+    init(title: String, coordinate: CLLocationCoordinate2D) {
         self.title = title
         self.coordinate = coordinate
-        self.info = info
     }
 }
 
@@ -40,6 +38,7 @@ class CountryDetailsViewController: UIViewController {
     var alphaCode: String!
     var population: Int!
     var flagURL: URL!
+    var latlng: [Double]!
     var flagView: MacawView!
 
     override func viewDidLayoutSubviews() {
@@ -86,9 +85,8 @@ class CountryDetailsViewController: UIViewController {
     }
 
     func loadMap() {
-        let london = Capital(title: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), info: "Home to the 2012 Summer Olympics.")
-
-        mapView.addAnnotation(london)
-        mapView.setCenter(CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), animated: true)
+        let annotation = Capital(title: capital, coordinate: CLLocationCoordinate2D(latitude: latlng[0], longitude: latlng[1]))
+        mapView.addAnnotation(annotation)
+        mapView.setCenter(CLLocationCoordinate2D(latitude: latlng[0], longitude: latlng[1]), animated: true)
     }
 }
