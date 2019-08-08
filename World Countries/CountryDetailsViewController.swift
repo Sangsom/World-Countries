@@ -48,7 +48,13 @@ class CountryDetailsViewController: UIViewController {
     func loadFlag() {
         let text = try! String(contentsOf: flagURL, encoding: String.Encoding.utf8)
         let node = try! SVGParser.parse(text: text)
-        let flagView = MacawView(node: node, frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width, height: 200))
+        let flagView = MacawView(
+            node: node,
+            frame: CGRect(
+                x: 0,
+                y: 100,
+                width: UIScreen.main.bounds.width,
+                height: UIScreen.main.bounds.width / 2.0))
         flagView.contentMode = .scaleAspectFit
         self.view.addSubview(flagView)
     }
