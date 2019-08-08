@@ -35,6 +35,7 @@ class CountryDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = name
         loadFlag()
     }
 
