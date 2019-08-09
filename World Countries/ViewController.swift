@@ -56,6 +56,8 @@ class ViewController: UITableViewController {
             vc.population = country.population
             vc.flagURL = country.flag
             vc.latlng = country.latlng
+            vc.currency = country.currencies.first?.name
+            vc.currencySymbol = country.currencies.first?.symbol
         }
     }
 }

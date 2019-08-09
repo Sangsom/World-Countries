@@ -18,6 +18,7 @@ class CountryDetailsViewController: UIViewController {
     @IBOutlet var subRegionLabel: UILabel!
     @IBOutlet var alphaCodeLabel: UILabel!
     @IBOutlet var populationLabel: UILabel!
+    @IBOutlet var currencyLabel: UILabel!
     @IBOutlet var mapView: MKMapView!
     
     // MARK: Variables
@@ -29,6 +30,8 @@ class CountryDetailsViewController: UIViewController {
     var population: Int!
     var flagURL: URL!
     var latlng: [Double]!
+    var currency: String?
+    var currencySymbol: String?
     var flagView: MacawView!
 
     override func viewDidLayoutSubviews() {
@@ -51,12 +54,21 @@ class CountryDetailsViewController: UIViewController {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         let formattedPopulation = formatter.string(from: NSNumber(value: population))!
+        var formattedCurrency = ""
 
-        capitalLabel.text = "Capital: \(capital.description)"
-        regionLabel.text = "Region: \(region.description)"
-        subRegionLabel.text = "Sub Region: \(subRegion.description)"
-        alphaCodeLabel.text = "Code: \(alphaCode.description)"
-        populationLabel.text = "Population: \(formattedPopulation.description)"
+        if let currencySymbol = currencySymbol {
+            formattedCurrency = "\(currencySymbol.description) - "
+        }
+        if let currency = currency {
+            formattedCurrency += "\(currency.description)"
+        }
+
+        capitalLabel.text = capital
+        regionLabel.text = region
+        subRegionLabel.text = subRegion
+        alphaCodeLabel.text = alphaCode
+        populationLabel.text = formattedPopulation
+        currencyLabel.text = formattedCurrency
     }
 
     func loadFlag() {
