@@ -8,4 +8,4 @@ List of all the world countries and by clicking on country you will see counttry
 - MapKit for showing capital location.
 - And a lot of searching implementation details in Stackoverflow, HackingWithSwift, and Raywenderlich tutorials.
 
-![Imgur](https://imgur.com/C7qQdXu)
+![World Countries](https://media.giphy.com/media/efVJRNoenKZ00XknhX/giphy.gif)
