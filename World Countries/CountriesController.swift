@@ -22,7 +22,6 @@ class CountriesController {
                 let countryData = try? jsonDecode.decode([Country].self, from: data) {
                     completion(countryData)
             } else {
-                print("Failed to decode", error.debugDescription)
                 completion(nil)
             }
         }
