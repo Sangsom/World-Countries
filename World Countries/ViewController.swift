@@ -65,7 +65,12 @@ class ViewController: UITableViewController {
         if segue.identifier == "CountryDetailSegue" {
             let vc = segue.destination as! CountryDetailsViewController
             let index = tableView.indexPathForSelectedRow?.row
-            let country = countries[index!]
+            let country: Country
+            if isFiltering() {
+                country = filteredCountries[index!]
+            } else {
+                country = countries[index!]
+            }
 
             vc.name = country.name
             vc.capital = country.capital
