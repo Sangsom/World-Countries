@@ -83,6 +83,8 @@ class CountryDetailsViewController: UIViewController {
                 width: UIScreen.main.bounds.width,
                 height: UIScreen.main.bounds.width / 2.0))
         flagView.contentMode = .scaleAspectFill
+        flagView.layer.borderWidth = 1.0
+        flagView.layer.borderColor = UIColor.gray.cgColor
         self.view.addSubview(flagView)
     }
 
