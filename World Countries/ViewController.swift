@@ -11,9 +11,19 @@ import UIKit
 class ViewController: UITableViewController {
 
     var countries: [Country] = []
+    var filteredCountries = [Country]()
+    let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Setup the Search Controller
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Country"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
 
         title = "World Countries"
 
@@ -25,17 +35,24 @@ class ViewController: UITableViewController {
                 }
             }
         }
-
-        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering() {
+            return filteredCountries.count
+        }
+
         return countries.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryIdentifier", for: indexPath)
-        let country = countries[indexPath.row]
+        let country: Country
+        if isFiltering() {
+            country = filteredCountries[indexPath.row]
+        } else {
+            country = countries[indexPath.row]
+        }
         cell.textLabel?.text = country.name
         return cell
     }
@@ -62,5 +79,29 @@ class ViewController: UITableViewController {
             vc.currencySymbol = country.currencies.first?.symbol
         }
     }
+
+    // MARK: Helper methods
+    func searchBarIsEmptry() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredCountries = countries.filter({ (country: Country) -> Bool in
+            return country.name.lowercased().contains(searchText.lowercased())
+        })
+
+        tableView.reloadData()
+    }
+
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmptry()
+    }
 }
 
+extension ViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+}
